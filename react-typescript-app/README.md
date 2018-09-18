@@ -15,7 +15,7 @@ Steps taken to create this starter app:
    ```json
    {
       "compilerOpions": {
-         "target": "es6", 
+         "target": "es5", 
          "jsx": "react",
          "module": "commonjs"
       },
