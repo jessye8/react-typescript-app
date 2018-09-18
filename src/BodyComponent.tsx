@@ -7,7 +7,7 @@ export default class BodyComponent extends React.Component <{}> {
         render() {
                 return (
                         <div>  
-                            <p>I am a component which shows a logo. For more information see the Readme.md at https://github.com/jessye8/react-typescript-app</p>
+                            <img src={Logo}/> I am a component which shows a logo. For more information see the Readme.md at <a href='https://github.com/jessye8/react-typescript-app'>React-TypeScript-App</a>
                         </div>
                 );
         }
