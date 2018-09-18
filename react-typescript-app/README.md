@@ -7,7 +7,8 @@ Steps taken to create this starter app:
 3) The `npm init` command creates the package.json file and the scripts section was updated:
    ```
    "scripts": {
-      "start": "webpack"
+      "start": "webpack --mode=development",
+      "prod": "webpack --mode=productions"
    },
    ```
 4) The tsconfig.json file contains the object below. Adding the jsx line, is similar to `tsc-jsx react` command  Webpack will be configured to handle include entry file. Use "es5" for target, if you need it to work in IE.
