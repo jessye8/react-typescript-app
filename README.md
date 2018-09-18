@@ -10,11 +10,11 @@ Steps taken to create this starter app:
       "start": "webpack"
    },
    ```
-4) The tsconfig.json file contains the object below. Adding the jsx line, is similar to `tsc-jsx react` command  Webpack will be configured to handle include entry file.
+4) The tsconfig.json file contains the object below. Adding the jsx line, is similar to `tsc-jsx react` command  Webpack will be configured to handle include entry file. Use "es5" for target, if you need it to work in IE.
    ```json
    {
       "compilerOpions": {
-         "target": "es6",
+         "target": "es6", 
          "jsx": "react",
          "module": "commonjs"
       },
