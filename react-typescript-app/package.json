@@ -4,7 +4,8 @@
   "description": "React/Typscript Starter App",
   "main": "index.js",
   "scripts": {
-    "start": "webpack"
+    "start": "webpack --mode=developmnt",
+    "prod": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
