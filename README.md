@@ -1,5 +1,6 @@
 # Starter Apps
 
 This repository contains the following starter applications:
-*Bullet List
-react-typescript-app
+* react-typescript-app - an app that uses react and typescript only. It contains 3 components for header, body and footer.
+* spfx-app - Coming soon....
+* oui-fab-react-app - Coming soon...
