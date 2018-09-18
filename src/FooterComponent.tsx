@@ -9,13 +9,10 @@ super(props);
   render() {
     return (  <div>
                 <hr/>
-                {this.props.company}
-                <br/>
-                Address: {this.props.address}
-                <br/>
-                Date: {this.props.date.toDateString()}
-            </div>
-
-                );
-  }
+                <footer style={{textAlign: 'right'}}>
+                   {this.props.company} | {this.props.address} | {this.props.date.toDateString()}
+                <footer>
+               </div>
+           );
+   }
 }
