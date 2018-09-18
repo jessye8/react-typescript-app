@@ -1,5 +1,5 @@
 {
-  "name": "starter-app",
+  "name": "react-typescript-app",
   "version": "1.0.0",
   "description": "React/Typscript Starter App",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jessye8/react-typescript-app.git"
+    "url": "git+https://github.com/jessye8/starter-apps/react-typescript-app.git"
   },
   "keywords": [
     "react"
@@ -16,9 +16,9 @@
   "author": "Jessica Travis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jessye8/react-typescript-app/issues"
+    "url": "https://github.com/jessye8/starter-apps/react-typescript-app/issues"
   },
-  "homepage": "https://github.com/jessye8/react-typescript-app#readme",
+  "homepage": "https://github.com/jessye8/starter-apps/react-typescript-app#readme",
   "dependencies": {
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
