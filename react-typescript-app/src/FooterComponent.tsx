@@ -1,7 +1,7 @@
 import * as React from "react";
 import FooterInterface from './IFooter'
 
-export default class UserComponent extends React.Component<FooterInterface, {}> {
+export default class FooterComponent extends React.Component<FooterInterface, {}> {
 
 constructor (props: FooterInterface){
 super(props);
