@@ -8,7 +8,7 @@ ReactDOM.render(
   <div>    
     <HeaderComponent/>
     <BodyComponent/>
-    <FooterComponent company="Booz Allen Hamilton" address="San Diego, CA" date={new Date()} />
+    <FooterComponent company="Company Name Goes Here" address="San Diego, CA" date={new Date()} />
   </div>,
   document.getElementById("root")
 );
