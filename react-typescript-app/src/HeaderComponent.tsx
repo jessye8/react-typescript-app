@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export default class FirstComponent extends React.Component <{}> {
+export default class HeaderComponent extends React.Component <{}> {
         
         render() {
                 return (
