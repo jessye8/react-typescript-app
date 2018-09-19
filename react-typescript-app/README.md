@@ -7,7 +7,7 @@ Steps taken to create this starter app:
 3. Update the package.json file's scripts section:
    ```
    "scripts": {
-      "start": "webpack --mode=development",
+      "dev": "webpack --mode=development",
       "prod": "webpack --mode=productions"
    },
    ```
