@@ -28,7 +28,7 @@ Steps taken to create this starter app:
    `npm install webpack ts-loader`
 6. Install webpack-cli as dev. dependency
    `npm install webpack-cli --save-dev`
-7. The webpack.config.js code is explained very well on Ogundipe Samuel's <a href="https://blog.logrocket.com/how-why-a-guide-to-using-typescript-with-react-fffb76c61614">LogRocket</a> site. But as an overview, this file configures the entry file, what output path and filename should be used, extensions to look for and loaders to use for which file extensions. I included watch and set it to true, so that any changes made are automatically recompiled, but you can remove or set this to false if you don't want to watch for changes.(/\.tsx?$/ means all files that end with .ts or .tsx) 
+7. The webpack.config.js code is explained very well on Ogundipe Samuel's <a href="https://blog.logrocket.com/how-why-a-guide-to-using-typescript-with-react-fffb76c61614">LogRocket</a> site. But as an overview, this file configures the entry file, what output path and filename should be used, extensions to look for and loaders to use for which file extensions. I included watch and set it to true, so that any changes made are automatically recompiled, but you can remove or set this to false if you don't want to watch for changes. Also, if you already have react and react-dom saved in your environment and don't want them included in the bundle, for example with SharePoint development, include the externals object and reference them in the index.html file. (/\.tsx?$/ means all files that end with .ts or .tsx) 
    ```javascript
    var path = require("path");
    var config = {
@@ -41,6 +41,10 @@ Steps taken to create this starter app:
        extensions: [".ts", ".tsx", ".js"]
      },
      watch: true,
+     externals: {
+        "react": "React",
+        "react-dom": "ReactDOM"
+    },
      module: {
        rules: [
           {
