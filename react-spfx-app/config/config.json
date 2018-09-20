@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/banner/BannerWebPart.js",
+      "manifest": "./src/webparts/banner/BannerWebPart.manifest.json",
+      "outputPath": "./dist/banner-web-part.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "BannerWebPartStrings": "webparts/banner/loc/{locale}.js"
+  }
+}
