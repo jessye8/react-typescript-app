@@ -35,7 +35,12 @@ export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartP
   protected get dataVersion(): Version {
     return Version.parse('1.0');
   }
-
+  
+  //enables the apply button in properties pane
+  protected get disableReactivePropertyChanges(): boolean {
+    return true;
+  }
+  
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
