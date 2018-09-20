@@ -1,7 +1,11 @@
 declare interface IBannerWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
-  DescriptionFieldLabel: string;
+  TitleLabel: string;
+  DescriptionLabel: string;
+  IncludeTitleLabel: string;
+  BgColorLabel: string;
+  HideWPLabel: string;
 }
 
 declare module 'BannerWebPartStrings' {

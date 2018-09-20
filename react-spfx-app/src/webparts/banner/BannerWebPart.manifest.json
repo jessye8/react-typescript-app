@@ -20,7 +20,11 @@
     "description": { "default": "Banner Web Part description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "Banner Web Part"
+      "title": "Welcome to our SharePoint Site!",
+      "description": "Customizable Banner",
+      "includeTitle": true,
+      "bgColor": "1",
+      "hideWP": "false"
     }
   }]
 }

@@ -4,7 +4,10 @@ import { Version } from '@microsoft/sp-core-library';
 import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,
-  PropertyPaneTextField
+  PropertyPaneTextField,
+  PropertyPaneCheckbox,
+  PropertyPaneDropdown,
+  PropertyPaneToggle
 } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'BannerWebPartStrings';
@@ -12,7 +15,11 @@ import Banner from './components/Banner';
 import { IBannerProps } from './components/IBannerProps';
 
 export interface IBannerWebPartProps {
+  title: string;
   description: string;
+  includeTitle: boolean;
+  bgColor: string;
+  hideWebPart: boolean;
 }
 
 export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartProps> {
@@ -21,7 +28,11 @@ export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartP
     const element: React.ReactElement<IBannerProps > = React.createElement(
       Banner,
       {
-        description: this.properties.description
+        title: this.properties.title,
+        description: this.properties.description,
+        includeTitle: this.properties.includeTitle,
+        bgColor: this.properties.bgColor,
+        hideWebPart: this.properties.hideWebPart
       }
     );
 
@@ -35,12 +46,12 @@ export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartP
   protected get dataVersion(): Version {
     return Version.parse('1.0');
   }
-  
+
   //enables the apply button in properties pane
   protected get disableReactivePropertyChanges(): boolean {
     return true;
   }
-  
+
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
@@ -52,8 +63,28 @@ export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartP
             {
               groupName: strings.BasicGroupName,
               groupFields: [
+                PropertyPaneTextField('title', {
+                  label: strings.TitleLabel
+                }),
                 PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                  label: strings.DescriptionLabel,
+                  multiline: true
+                }),
+                PropertyPaneCheckbox('includeTitle', {
+                  text: strings.IncludeTitleLabel
+                }),
+                PropertyPaneDropdown('bgColor', {
+                  label: strings.BgColorLabel,
+                  options: [
+                    { key: 'row1', text: 'purple'},
+                    { key: 'row2', text: 'orange'},
+                    { key: 'row3', text: 'teal'}
+                  ]
+                }),
+                PropertyPaneToggle('hideWP', {
+                  label: strings.HideWPLabel,
+                  onText: 'On',
+                  offText: 'Off'
                 })
               ]
             }
