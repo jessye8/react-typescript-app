@@ -3,15 +3,16 @@ React/Typescript starter app.
 
 Steps taken to create this starter app:
 1. Create a directory for app, `md <your app name>` and clone this folder.
-2. Install typescript globally and link it `npm install -g typescript`, then `npm link typescritpt`
-3. Update the package.json file's scripts section:
+2. Run npm install
+3. Install typescript globally and link it `npm install -g typescript`, then `npm link typescritpt`
+4. Update the package.json file's scripts section:
    ```
    "scripts": {
       "dev": "webpack --mode=development",
       "prod": "webpack --mode=production"
    },
    ```
-4. The tsconfig.json file contains the object below. Adding the jsx line, is similar to `tsc-jsx react` command  Webpack will be configured to handle include entry file. Use "es5" for target, if you need this app to work in IE.
+5. The tsconfig.json file contains the object below. Adding the jsx line, is similar to `tsc-jsx react` command  Webpack will be configured to handle include entry file. Use "es5" for target, if you need this app to work in IE.
    ```json
    {
       "compilerOpions": {
@@ -24,11 +25,11 @@ Steps taken to create this starter app:
       ]
    }
    ```
-5. Install webpack and the ts-loader plugin, which is the typescript loader for webpack.
+6. Install webpack and the ts-loader plugin, which is the typescript loader for webpack.
    `npm install webpack ts-loader`
-6. Install webpack-cli as dev. dependency
+7. Install webpack-cli as dev. dependency
    `npm install webpack-cli --save-dev`
-7. The webpack.config.js code is explained very well on Ogundipe Samuel's <a href="https://blog.logrocket.com/how-why-a-guide-to-using-typescript-with-react-fffb76c61614">LogRocket</a> site. But as an overview, this file configures the entry file, what output path and filename should be used, extensions to look for and loaders to use for which file extensions. I included watch and set it to true, so that any changes made are automatically recompiled, but you can remove or set this to false if you don't want to watch for changes. Also, if you already have react and react-dom saved in your environment and don't want them included in the bundle, for example with SharePoint development, include the externals object and reference them in the index.html file. (/\.tsx?$/ means all files that end with .ts or .tsx) 
+8. The webpack.config.js code is explained very well on Ogundipe Samuel's <a href="https://blog.logrocket.com/how-why-a-guide-to-using-typescript-with-react-fffb76c61614">LogRocket</a> site. But as an overview, this file configures the entry file, what output path and filename should be used, extensions to look for and loaders to use for which file extensions. I included watch and set it to true, so that any changes made are automatically recompiled, but you can remove or set this to false if you don't want to watch for changes. Also, if you already have react and react-dom saved in your environment and don't want them included in the bundle, for example with SharePoint development, include the externals object and reference them in the index.html file. (/\.tsx?$/ means all files that end with .ts or .tsx) 
    ```javascript
    var path = require("path");
    var config = {
