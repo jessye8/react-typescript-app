@@ -6,3 +6,5 @@ This is  web part that was created using the `yo @microsoft/sharepoint` to scaff
 1. Clone this folder and run `npm install`
 2. Run `gulp trust-dev-cert`
 3. Run `gulp serve`
+
+Coming soon, updates to extra properties.
