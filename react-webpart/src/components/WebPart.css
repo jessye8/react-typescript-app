@@ -1,0 +1,27 @@
+.container {
+        position: relative;
+        max-width: 600px;
+        margin: 0px auto;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    padding: 10px;
+}
+    
+.adminGear {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+.pane {
+    position: absolute;
+    left: 700px;
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+    
