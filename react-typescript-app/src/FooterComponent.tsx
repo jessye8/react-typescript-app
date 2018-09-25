@@ -11,7 +11,7 @@ super(props);
                 <hr/>
                 <footer style={{textAlign: 'right'}}>
                    {this.props.company} | {this.props.address} | {this.props.date.toDateString()}
-                <footer>
+                </footer>
                </div>
            );
    }

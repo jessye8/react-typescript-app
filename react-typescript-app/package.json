@@ -1,10 +1,10 @@
 {
   "name": "react-typescript-app",
   "version": "1.0.0",
-  "description": "React/Typscript Starter App",
+  "description": "React/Typescript Starter App",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --mode=developmnt",
+    "dev": "webpack --mode=development -w",
     "prod": "webpack --mode=production"
   },
   "repository": {
