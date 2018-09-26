@@ -2,6 +2,7 @@ import * as React from "react";
 import './WebPart.css';
 import gears from '../img/fa-gears.png';
 import PropertiesPane from "./PropertiesPane";
+import IPropertiesPaneProps from './IPropertiesPane';
 
 /*function isEditMode()
 {
@@ -30,22 +31,25 @@ import PropertiesPane from "./PropertiesPane";
 	return boolPageInEditMode;
 }*/
 
-export default class AdminGear extends React.Component {
+export default class AdminGear extends React.Component <IPropertiesPaneProps, {}> {
 	state = {
-	  isHidden: true
+	  toggle: this.props.toggle,
+	  description: this.props.description,
+	  propCallback: this.props.propCallback
 	}	
 	
 	showPropertiesPane = () => {
 		this.setState({
-			isHidden: !this.state.isHidden
+			toggle: !this.state.toggle,
+			description: this.props.description
 		})
 	} 
 
     render() {       
 		return (
 			<div>
-				<img src={ gears } className="adminGear" onClick={this.showPropertiesPane.bind(this)} />
-				{!this.state.isHidden && <PropertiesPane toggle={!this.state.isHidden} />}
+				<img src={ gears } className="adminGear" onClick={this.showPropertiesPane}/>
+				{!this.state.toggle && <PropertiesPane propCallback={this.state.propCallback.bind(this)} toggle={!this.state.toggle} description={this.state.description} />}
 			</div>
 		);
     }

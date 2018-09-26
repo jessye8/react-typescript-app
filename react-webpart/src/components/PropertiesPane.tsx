@@ -1,25 +1,36 @@
 import * as React from "react";
 import IPropertiesPaneProps from "./IPropertiesPane";
+import { DialogFooter, Label, TextField } from 'office-ui-fabric-react';
 import './WebPart.css';
 
 export default class PropertiesPane extends React.Component <IPropertiesPaneProps, {}> {       
         state = {
-                isHidden: this.props.toggle
+                toggle: this.props.toggle,
+                description: this.props.description,
+                propCallback: this.props.propCallback
         }
 
         showPropertiesPane = () => {
                 this.setState({
-                        isHidden: !this.state.isHidden
+                        toggle: !this.state.toggle
                 })
         } 
 
         render() {
-                if(this.state.isHidden){
+                if(this.state.toggle){
                         return (                      
                                 <div className="pane">  
-                                        <h3>Hello, Welcome to the properties pane.</h3>
+                                        <h4>Properties Pane</h4>
                                         <hr />
-                                        <button className="button" onClick={this.showPropertiesPane.bind(this)}>Close</button>                                               
+                                        <Label>Description:</Label>
+                                        <TextField 
+                                           placeholder="Enter a description" 
+                                           onChange={(event, value) => { this.setState({ description: value });}}
+                                        />
+                                        <DialogFooter>
+                                                <button className="button" onClick={this.state.propCallback.bind(this, this.state.description)}>Apply</button>                                               
+                                                <button className="button" onClick={this.showPropertiesPane.bind(this)}>Close</button>                                            
+                                        </DialogFooter>
                                 </div>
                         );  
                 }else{
