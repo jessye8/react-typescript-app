@@ -2,4 +2,4 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-The App files were replaced with what's in the src/components folder.
+The components have been added to the src/components folder to handle the webpart and properties pane.
